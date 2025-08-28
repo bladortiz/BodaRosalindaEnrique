@@ -6,46 +6,22 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400&display=swap');
   body {
-    ffont-family: 'Roboto', sans-serif;
-    background: 
-      linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
-      url('https://images.unsplash.com/photo-1622541010249-48e041b499cd?ixlib=rb-4.0.3auto=format&fit=crop&w=1920&q=80'),
-      url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80'),
-      url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover, cover, cover;
-    background-position: center, center, center;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+      url('https://images.unsplash.com/photo-1622541010249-48e041b499cd?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    animation: backgroundSlide 12s infinite;
     color: #333;
     text-align: center;
     padding: 20px;
-
-  }
-    @keyframes backgroundSlide {
-      0%, 33% { background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(https://images.unsplash.com/photo-1622541010249-48e041b499cd?ixlib=rb-4.0.3auto=format&fit=crop&w=1920&q=80'); }
-      34%, 66% { background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80'); }
-      67%, 100% { background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1920&q=80'); }
-    }
-    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-
   }
   h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 4.5em;
     color: #c94f7c;
-    margin-bottom: 10px;
     text-shadow: 2px 2px 4px #fff;
-    animation: pulse 2s ease-in-out infinite alternate, glow 3s ease-in-out infinite;
   }
-  @keyframes pulse {
-    from { transform: scale(1); }
-    to { transform: scale(1.05); }
-  }
-  @keyframes glow {
-    0%, 100% { text-shadow: 2px 2px 4px #fff, 0 0 10px #c94f7c; }
-    50% { text-shadow: 2px 2px 4px #fff, 0 0 20px #c94f7c, 0 0 30px #c94f7c; }
-  }
-  h2 { color: #7d5ba6; font-weight: normal; }
   .quote {
     font-style: italic;
     color: #c94f7c;
@@ -53,46 +29,19 @@
     margin: 15px;
   }
   .section {
-    background: transparent;
     margin: 20px auto;
     padding: 25px;
     border-radius: 20px;
     max-width: 700px;
+    background: rgba(255,255,255,0.8);
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-    animation: fadeInUp 1s ease;
-    border: 3px solid #d4af37;
-    position: relative;
-    z-index: 2;
   }
-  @keyframes fadeInUp { from {transform:translateY(20px);opacity:0;} to {transform:translateY(0);opacity:1;} }
-  @keyframes floatWedding {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-5px) rotate(0.5deg); }
-    50% { transform: translateY(-3px) rotate(0deg); }
-    75% { transform: translateY(-7px) rotate(-0.5deg); }
-  }
-  
-  @keyframes sparkleMove {
-    0%, 100% { 
-      background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.4) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 20%, rgba(196,79,124,0.4) 0%, transparent 50%),
-                  radial-gradient(circle at 40% 40%, rgba(125,91,166,0.4) 0%, transparent 50%);
-    }
-    25% { 
-      background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.5) 0%, transparent 50%),
-                  radial-gradient(circle at 30% 70%, rgba(196,79,124,0.5) 0%, transparent 50%),
-                  radial-gradient(circle at 60% 10%, rgba(125,91,166,0.5) 0%, transparent 50%);
-    }
-    50% { 
-      background: radial-gradient(circle at 10% 50%, rgba(255,255,255,0.3) 0%, transparent 50%),
-                  radial-gradient(circle at 90% 60%, rgba(196,79,124,0.3) 0%, transparent 50%),
-                  radial-gradient(circle at 50% 90%, rgba(125,91,166,0.3) 0%, transparent 50%);
-    }
-    75% { 
-      background: radial-gradient(circle at 60% 20%, rgba(255,255,255,0.6) 0%, transparent 50%),
-                  radial-gradient(circle at 20% 40%, rgba(196,79,124,0.6) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 80%, rgba(125,91,166,0.6) 0%, transparent 50%);
-    }
+  .section-image {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 3px solid #c94f7c;
   }
   .button {
     display: inline-block;
@@ -105,32 +54,21 @@
     transition: 0.3s;
   }
   .button:hover { background: #c94f7c; }
+  .music-btn {
+    margin-top: 10px;
+    background: linear-gradient(45deg, #c94f7c, #7d5ba6);
+    border: none;
+    cursor: pointer;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+  }
   .countdown {
     font-size: 1.5em;
     color: #7d5ba6;
     font-weight: bold;
     margin-top: 10px;
-  }
-  .section-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    display: block;
-    object-fit: cover;
-    border: 3px solid #c94f7c;
-  }
-<div class="section">
-  <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=300&q=80" alt="Flores de boda" class="section-image">
-  <h2>🎵 Música para Nuestra Boda</h2>
-  <p class="quote">"Nuestra canción especial"</p>
-  <button class="music-btn" onclick="toggleMusic()">🎵 Reproducir Música</button>
-  <audio id="musicPlayer" src="musica.mp3.mpeg" preload="auto"></audio>
-
-</div>
-  @keyframes musicPulse {
-    0%, 100% { box-shadow: 0 0 5px #c94f7c; }
-    50% { box-shadow: 0 0 20px #c94f7c, 0 0 30px #7d5ba6; }
   }
 </style>
 </head>
@@ -139,24 +77,14 @@
 <h1>Rosalinda & Enrique</h1>
 <p class="quote">"Con el corazón lleno de amor, te invitamos a ser parte de nuestra historia."</p>
 
-script>
-let musicPlaying = false;
-function toggleMusic() {
-  const player = document.getElementById('musicPlayer');
-  const btn = document.querySelector('.music-btn');
-  if (!musicPlaying) {
-    player.play();
-    btn.textContent = "⏸️ Pausar Música";
-    btn.style.background = "linear-gradient(45deg, #28a745, #20c997)";
-    musicPlaying = true;
-  } else {
-    player.pause();
-    btn.textContent = "🎵 Reproducir Música";
-    btn.style.background = "linear-gradient(45deg, #c94f7c, #7d5ba6)";
-    musicPlaying = false;
-  }
-}
-</script></div>
+<!-- 🎶 Reproductor de música local -->
+<div class="section">
+  <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=300&q=80" alt="Flores de boda" class="section-image">
+  <h2>🎵 Música para Nuestra Boda</h2>
+  <p class="quote">"Nuestra canción especial"</p>
+  <button class="music-btn" onclick="toggleMusic()">🎵 Reproducir Música</button>
+  <audio id="musicPlayer" src="musica.mpr.mpeg" preload="auto"></audio>
+</div>
 
 <div class="section">
   <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=300&q=80" alt="Anillos de boda" class="section-image">
@@ -184,7 +112,7 @@ function toggleMusic() {
 <div class="section">
   <h2>👫 Padrinos de Velación</h2>
   <p class="quote">"Tenemos el honor de que nos acompañen nuestros Padrinos de Velación"</p>
-  <p style="font-size: 2em; font-weight: bold; color: #7d5ba6; animation: fadeIn 2s ease-in-out, textGlow 3s ease-in-out infinite;">Eruvey Flores Landa y Míriam Castillo de Flores</p>
+  <p style="font-size: 2em; font-weight: bold; color: #7d5ba6;">Eruvey Flores Landa y Míriam Castillo de Flores</p>
 </div>
 
 <div class="section">
@@ -204,20 +132,20 @@ let musicPlaying = false;
 function toggleMusic() {
   const player = document.getElementById('musicPlayer');
   const btn = document.querySelector('.music-btn');
-  
   if (!musicPlaying) {
-    player.src = 'https://www.youtube.com/embed/9N02Mu_0LmI?autoplay=1&loop=1&playlist=9N02Mu_0LmI';
-    btn.textContent = '⏸️ Pausar Música';
-    btn.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+    player.play();
+    btn.textContent = "⏸️ Pausar Música";
+    btn.style.background = "linear-gradient(45deg, #28a745, #20c997)";
     musicPlaying = true;
   } else {
-    player.src = '';
-    btn.textContent = '🎵 Reproducir Música';
-    btn.style.background = 'linear-gradient(45deg, #c94f7c, #7d5ba6)';
+    player.pause();
+    btn.textContent = "🎵 Reproducir Música";
+    btn.style.background = "linear-gradient(45deg, #c94f7c, #7d5ba6)";
     musicPlaying = false;
   }
 }
 
+// ⏳ Cuenta regresiva
 const targetDate = new Date("Sep 13, 2025 16:00:00").getTime();
 const countdownEl = document.getElementById("countdown");
 setInterval(() => {
