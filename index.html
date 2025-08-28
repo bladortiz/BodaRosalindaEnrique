@@ -120,10 +120,14 @@
     object-fit: cover;
     border: 3px solid #c94f7c;
   }
-  .music-btn {
-    background: linear-gradient(45deg, #c94f7c, #7d5ba6);
-    animation: musicPulse 2s ease-in-out infinite;
-  }
+<div class="section">
+  <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=300&q=80" alt="Flores de boda" class="section-image">
+  <h2>🎵 Música para Nuestra Boda</h2>
+  <p class="quote">"Nuestra canción especial"</p>
+  <button class="music-btn" onclick="toggleMusic()">🎵 Reproducir Música</button>
+  <audio id="musicPlayer" src="musica.mp3.mpeg" preload="auto"></audio>
+
+</div>
   @keyframes musicPulse {
     0%, 100% { box-shadow: 0 0 5px #c94f7c; }
     50% { box-shadow: 0 0 20px #c94f7c, 0 0 30px #7d5ba6; }
